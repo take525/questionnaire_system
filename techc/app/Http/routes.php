@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/list', 'ProductController@getIndex');
+Route::get('/list', 'AdminController@getIndex');
 
-Route::get('/detail/{id}', 'ProductController@detail');
+Route::get('/detail/{id}', 'AdminController@detail');
+
+Route::get('/venue', 'AdminController@venue');

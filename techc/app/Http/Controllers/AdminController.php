@@ -6,7 +6,7 @@ use App\Product;
 use Illuminate;
 use App\Http\Requests;
 
-class ProductController extends Controller
+class AdminController extends Controller
 {
     protected $lists;
     protected $members;
@@ -65,5 +65,10 @@ class ProductController extends Controller
 
     	return view('admin.detail')->with(
             compact('lists', 'members', 'evaluation', 'sum_val', 'sum_age', 'sum_gen'));
+    }
+
+    public function venue()
+    {
+        return view('admin.venue');
     }
 }

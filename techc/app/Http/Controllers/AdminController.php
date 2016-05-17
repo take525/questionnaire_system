@@ -71,4 +71,9 @@ class AdminController extends Controller
     {
         return view('admin.venue');
     }
+
+    public function venue_detail()
+    {
+        return view('admin.venue_detail');
+    }
 }

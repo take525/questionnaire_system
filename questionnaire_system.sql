@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2016 年 5 朁E10 日 09:27
+-- Generation Time: 2016 年 5 朁E17 日 04:52
 -- サーバのバージョン： 5.6.24
 -- PHP Version: 5.6.8
 
@@ -19,6 +19,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `questionnaire_system`
 --
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `answer`
+--
+
+CREATE TABLE IF NOT EXISTS `answer` (
+  `id` int(11) NOT NULL,
+  `questionnaire_id` int(11) NOT NULL,
+  `answer` int(11) NOT NULL,
+  `respondent` int(11) NOT NULL,
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -82,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `overview` text NOT NULL,
   `img` varchar(128) DEFAULT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- テーブルのデータのダンプ `products`
@@ -91,7 +105,8 @@ CREATE TABLE IF NOT EXISTS `products` (
 INSERT INTO `products` (`id`, `product_name`, `overview`, `img`, `create_time`) VALUES
 (1, 'イラスト', '夜景を書きました。色使いに意識して尚且つ建物もらしさを意識して描いてみました。コンセプトは「明け方」ということなので、雰囲気作りに苦労はしましたが、うまく表現出来たと思います。', 'img/480_800', '2016-04-27 06:21:29'),
 (2, 'コミック', 'ここを頑張りました', NULL, '2016-04-27 06:23:16'),
-(3, 'ゲーム', '作りました', NULL, '2016-05-01 23:24:32');
+(3, 'ゲーム', '作りました', NULL, '2016-05-01 23:24:32'),
+(4, 'ロボット', 'ロボットを作りました', NULL, '2016-05-12 06:11:19');
 
 -- --------------------------------------------------------
 
@@ -102,20 +117,6 @@ INSERT INTO `products` (`id`, `product_name`, `overview`, `img`, `create_time`) 
 CREATE TABLE IF NOT EXISTS `questionnaire` (
   `id` int(11) NOT NULL,
   `content` text NOT NULL,
-  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- テーブルの構造 `questionnaire_answer`
---
-
-CREATE TABLE IF NOT EXISTS `questionnaire_answer` (
-  `id` int(11) NOT NULL,
-  `questionnaire_id` int(11) NOT NULL,
-  `answer` int(11) NOT NULL,
-  `user_genre` int(11) NOT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -149,6 +150,12 @@ CREATE TABLE IF NOT EXISTS `respondents` (
 --
 
 --
+-- Indexes for table `answer`
+--
+ALTER TABLE `answer`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `evaluations`
 --
 ALTER TABLE `evaluations`
@@ -173,12 +180,6 @@ ALTER TABLE `questionnaire`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `questionnaire_answer`
---
-ALTER TABLE `questionnaire_answer`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `questionnaire_year`
 --
 ALTER TABLE `questionnaire_year`
@@ -195,6 +196,11 @@ ALTER TABLE `respondents`
 --
 
 --
+-- AUTO_INCREMENT for table `answer`
+--
+ALTER TABLE `answer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `evaluations`
 --
 ALTER TABLE `evaluations`
@@ -208,16 +214,11 @@ ALTER TABLE `members`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `questionnaire`
 --
 ALTER TABLE `questionnaire`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `questionnaire_answer`
---
-ALTER TABLE `questionnaire_answer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `questionnaire_year`

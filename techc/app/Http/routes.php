@@ -13,6 +13,8 @@
 
 Route::get('/list', 'AdminController@getIndex');
 
-Route::get('/detail/{id}', 'AdminController@detail');
+Route::get('/list/detail/{id}', 'AdminController@detail');
 
 Route::get('/venue', 'AdminController@venue');
+
+Route::get('/venue/venue_detail', 'AdminController@venue_detail');

@@ -40,7 +40,7 @@
 						<td>
 							{{ $sum_val[$list->id] }}
 						</td>
-						<td><a href="./list/detail/{{ $list->id }}" class="btn btn-info">詳細</a></td>
+						<td><a href="./detail/{{ $list->id }}" class="btn btn-info">詳細</a></td>
 					</tr>
 				@endforeach
 				</tbody>

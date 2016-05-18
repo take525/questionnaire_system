@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<link href="{{{asset('/assets/css/bootstrap.min.css')}}}" rel="stylesheet">
-		<link href="{{{asset('/assets/css/venue.css')}}}" rel="stylesheet">
+		<link href="{{{asset('/assets/css/list.css')}}}" rel="stylesheet">
 		<meta charset="UTF-8">
 	</head>
 
@@ -16,28 +16,24 @@
 			</ul>
 		</div>
 		<div class="list">
-			<div class="list_sort">
-				<ul>
-					<li>
-						<select name="year">
-							<option value="2015">2015</option>
-						</select>
-					</li>
-					<li>
-						<select name="genle">
-							<option>全て</option>
-							<option>学生</onption>
-							<option>企業</option>
-							<option>一般</option>
-						</select>
-					</li>
-				</ul>
-			</option>
+			<ul>
+				<li>
+					<select name="year">
+						<option value="2015">2015</option>
+					</select>
+				</li>
+				<li>
+					<select name="genle">
+						<option>学生</onption>
+						<option>企業</option>
+					</select>
+				</li>
+			</ul>
 			<table class="table table-bordered">
 				<thead>
 					<tr>
 						<th>客層</th>
-						<th>所属</th>
+						<th>企業名</th>
 						<th>平均評価</th>
 						<th>詳細</th>
 					</tr>
@@ -45,21 +41,15 @@
 				<tbody>
 					<tr>
 						<td>学生</td>
-						<td></td>
 						<td>0</td>
-						<td><a href="./venue/venue_detail" class="btn btn-info">詳細</a></td>
+						<td>0</td>
+						<td><a href="#" class="btn btn-info">詳細</a></td>
 					</tr>
 					<tr>
 						<td>企業</td>
 						<td>ソニー</td>
 						<td>0</td>
-						<td><a href="./venue/venue_detail" class="btn btn-info">詳細</a></td>
-					</tr>
-					<tr>
-						<td>一般</td>
-						<td></td>
-						<td>0</td>
-						<td><a href="./venue/venue_detail" class="btn btn-info">詳細</a></td>
+						<td><a href="#" class="btn btn-info">詳細</a></td>
 					</tr>
 				</tbody>
 			</table>

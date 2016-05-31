@@ -8,7 +8,7 @@
 
 <body>
 <div class="wrap">
-	<img src="../assets/{{ $lists->img }}.jpg" alt="">
+	<img src="../../assets/{{ $lists->img }}.jpg" alt="">
 	<div class="info">
 		<table class="info_table">
 			<tr>

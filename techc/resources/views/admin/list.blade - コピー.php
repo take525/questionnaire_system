@@ -1,12 +1,23 @@
-@extends('common.header')
-	@section('addCss')
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="{{{asset('/assets/css/bootstrap.min.css')}}}" rel="stylesheet">
 		<link href="{{{asset('/assets/css/list.css')}}}" rel="stylesheet">
-	@stop
-@extends('common.body')
-	@extends('common.sidebar')
-		@section('sidebar')
-	@stop
-	@section('contents')
+		<meta charset="UTF-8">
+	</head>
+
+<body>
+	<div class="wrap">
+		<div class="side_bar">
+			<h2>We are TECH.C<br>アンケートシステム</h2>
+			<ul>
+				<li><a href="#">作品アンケート</a></li>
+				<li><a href="./venue">会場アンケート</a></li>
+			</ul>
+			<ul>
+				<li>アンケート編集</li>
+			</ul>
+		</div>
 		<div class="list">
 			<h2>作品別</h2>
 			<table class="table table-bordered">
@@ -38,4 +49,7 @@
 				</tbody>
 			</table>
 		</div>
-@stop
+	</div>
+</body>
+
+</html>

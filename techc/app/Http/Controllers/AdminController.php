@@ -76,4 +76,9 @@ class AdminController extends Controller
     {
         return view('admin.venue_detail');
     }
+
+    public function questionnaire_edit()
+    {
+        return view('admin.questionnaire_edit');
+    }
 }

@@ -18,3 +18,5 @@ Route::get('/list/detail/{id}', 'AdminController@detail');
 Route::get('/venue', 'AdminController@venue');
 
 Route::get('/venue/venue_detail', 'AdminController@venue_detail');
+
+Route::get('/questionnaire_edit', 'AdminController@questionnaire_edit');

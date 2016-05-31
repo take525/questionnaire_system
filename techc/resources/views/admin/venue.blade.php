@@ -14,6 +14,9 @@
 				<li><a href="./list">作品アンケート</a></li>
 				<li><a href="./venue">会場アンケート</a></li>
 			</ul>
+			<ul>
+				<li><a href="#">アンケート編集</a></li>
+			</ul>
 		</div>
 		<div class="list">
 			<ul>

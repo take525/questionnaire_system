@@ -1,10 +1,6 @@
-@extends('common.header')
+@extends('common.master')
 	@section('addCss')
 		<link href="{{{asset('/assets/css/list.css')}}}" rel="stylesheet">
-	@stop
-@extends('common.body')
-	@extends('common.sidebar')
-		@section('sidebar')
 	@stop
 	@section('contents')
 		<div class="list">
@@ -38,4 +34,4 @@
 				</tbody>
 			</table>
 		</div>
-@stop
+	@stop
